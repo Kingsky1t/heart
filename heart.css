@@ -1,0 +1,57 @@
+body{
+    margin:0;
+}
+
+.heart{
+    width:100px;
+    height:100px;
+    background-color:red;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: rotate(-45deg);
+    animation-name: bump;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+}
+
+.heart::after{
+    content: "";
+    width:100px;
+    height:100px;
+    background-color:red;
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+    left:50px;
+}
+
+.heart::before{
+    content: "";
+    width:100px;
+    height:100px;
+    background:radial-gradient(circle closest-corner at 40% 27%,white ,red 20px);
+    margin: auto;
+    border-radius: 50%;
+    position: absolute;
+    bottom:50px;
+}
+
+@keyframes bump {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
+  }
+
+
+/* .heart:hover{
+    transform: scale(2) rotate(-45deg);
+    animation-fill-mode: both;
+} */
